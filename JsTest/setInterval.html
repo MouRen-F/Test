@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    分：<input type="text" value="0">
+    秒：<input type="text" value="0">
+</body>
+<script>
+    var ms = 0;
+    var minute = 0;
+    var inputMs = document.getElementsByTagName("input")[1];
+    var inputMinute = document.getElementsByTagName("input")[0];
+    setInterval(function () {
+        ms++;
+        if (ms == 60) {
+            minute++;
+            inputMinute.value = minute;
+            if (minute == 3) {
+                clearInterval(1);
+                console.log("计时三分钟完成！");
+            }
+            ms = 0;
+        }
+        inputMs.value = ms;
+
+    }, 1000);
+</script>
+
+</html>

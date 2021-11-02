@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind</title>
+</head>
+
+<body>
+    <div class="app">
+        {{test}}
+        <p>{{fn()}}</p>
+        <input type="text" :value="fn()">
+    </div>
+    <script src="../../vue.js"></script>
+    <script>
+        var vue = new Vue({
+            el: ".app",
+            data: {
+                test: "ceshi",
+            },
+            methods: {
+                fn: function () {
+                    console.log("ceshi");
+                    return "aaa";
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

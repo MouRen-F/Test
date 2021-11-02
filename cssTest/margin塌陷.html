@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .father {
+            width: 200px;
+            background-color: pink;
+            /*border: 1px solid black;方案一  父/子元素加border*/
+            /* padding: 1px; 方案二  父/子元素加内边距*/
+            /* float: left;方案三  父/子元素加浮动 */
+            /* display: inline-block;  方案四  父/子元素设置为非block元素 */
+            /* position: fixed;  方案五  父/子元素绝对定位或窗口定位定位 */
+            /* overflow: auto;  方案六  父元素加overflow  除visible*/
+        }
+
+        .boy {
+            width: 100px;
+            height: 200px;
+            background-color: blue;
+            margin-bottom: 100px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <div class="father">
+        <div class="boy"></div>
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

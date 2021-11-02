@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .span1{
+        float: left;
+        display: inline-block;
+    }
+    .span2{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: #00f;
+        clear: both;
+    }
+    .box{
+        border: 1px solid black;
+    }
+    .box::after{
+        content: "123";
+        width: 50px;
+        height: 50px;
+        background-color: #0f0;
+        /* clear: both; */
+        float: left;
+        /* display: block; */
+    }
+    div div{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* display: inline-block; */
+        float: left;
+        /* white-space: nowrap;  超出不换行
+        overflow: hidden;        超出隐藏
+        text-overflow: ellipsis; 隐藏部分以...显示     单行文本超出以...显示  三个都要设置*/
+    }
+    .box3{
+        clear: both;
+    }
+</style>
+<body>
+    <!-- <span class="span1">123</span> -->
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div class="box3">3</div>
+    </div>
+    <span class="span2">321</span>
+</body>
+</html>

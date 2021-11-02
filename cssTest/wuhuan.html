@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五环</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            position: fixed;
+            height: 304px;
+            width: 704px;
+            top: 50%;
+            left: 50%;
+            margin-left: -352px;
+            margin-top: -152px;
+        }
+        div div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .c1{
+            border-color: #00f;
+            position:absolute;
+            /* border-width: 10px;
+            left: 10px;
+            margin-left: 10px; */
+        }
+        .c2{
+            border-color: #000;
+            /* position: absolute; */
+            left: 250px;
+        }
+        .c3{
+            border-color: #f00;
+            /* position: absolute; */
+            left: 500px;
+        }
+        .c4{
+            border-color: yellow;
+            /* position: absolute; */
+            top: 100px;
+            left: 375px;
+            z-index: 1;
+        }
+        .c5{
+            border-color: #0f0;
+            /* position: absolute; */
+            top: 100px;
+            left: 125px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+    </div>
+</body>
+</html>

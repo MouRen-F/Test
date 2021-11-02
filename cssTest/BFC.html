@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC bug</title>
+</head>
+<style>
+    .father {
+        position: relative;
+        top: 300px;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        background-color: #000;
+        margin-top: 100px;
+
+    }
+
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: #0f0;
+        margin-top: 50px;
+        /* border-top-width: 1px;
+        border-top-style: solid; */
+        /*不行，得设置在父元素*/
+
+        /* padding-top: 10px; */
+        /*不行，得设置在父元素*/
+
+        /* overflow: hidden; */
+        /*不行，得设置在父元素*/
+
+        /* position: absolute;*/
+        /*设置在父子元素都行*/
+
+        /* float: left; */
+        /*设置在父子元素都行*/
+
+        display: inline-block;
+        /*设置在父子元素都行*/
+    }
+
+    .box1 {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        background-color: #000;
+        /* margin-bottom: 30px; */
+        /* margin-top: 30px; */
+        /* border-bottom-width: 1px;
+        border-bottom-style: solid; 不行*/
+        /* padding-bottom: 10px; 不行*/
+        /* overflow: hidden; 不行*/
+        /* position: absolute; 需要设置在下面的元素*/
+        /* float: left; 需要设置在下面的元素*/
+        /*display: inline-block;都行*/
+
+
+        top: 300px;
+    }
+
+    .box2 {
+        width: 300px;
+        height: 300px;
+        background-color: #00f;
+        /* margin-top: 50px; */
+        margin-bottom: 50px;
+    }
+
+    .box3 {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+    }
+</style>
+
+<body>
+    <div class="father" style="color: wheat;">
+        <div style="width: 100px; height: 100px; background-color: #0ff;">
+
+        </div>
+        <div class="son"></div>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>

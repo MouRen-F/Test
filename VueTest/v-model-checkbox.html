@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <input type="checkbox" name="" id="" v-model='isactive'>同意 -->
+    <input type="checkbox" name="" id="" v-model='ball' value="篮球">篮球
+    <input type="checkbox" name="" id="" v-model='ball' value="足球">足球
+    <input type="checkbox" name="" id="" v-model='ball' value="排球">排球
+    <br> 球：{{ball}}
+  </div>
+  <script src="../../vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        isactive: '',//当多选框只有一个时，绑定的值为Boolean值，true为选中，false为未选中
+        ball: [],//当多选框为多个时，绑定的值为一个数组，选择一个复选框则把值添加到数组，如数组有值且与复选框的纸一样 则默认选中此复选框
+      },
+    });
+  </script>
+</body>
+
+</html>

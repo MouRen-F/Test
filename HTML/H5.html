@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #image{
+      width: 20px;
+    }
+    .wrap{
+      width: 500px;
+      height: 500px;
+      border:1px solid red;
+    }
+    .inner{
+      border:1px solid #00f;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .demo {
+      width: 0;
+      height: 0;
+      border-width: 20px;
+      border-style: solid;
+      border-color: transparent transparent red transparent;
+    }
+  </style>
+</head>
+<body>
+  <label for="date">date</label><input type="date" name="" id="date">
+  <label for="time">time</label><input type="date" name="" id="time">
+  <label for="search">search</label><input type="search" name="" id="search">
+  <label for="email">email</label><input type="email" name="" id="email">
+  <label for="url">url</label><input type="url" name="" id="url">
+  <label for="calendar">calendar</label><input type="calendar" name="" id="calendar">
+  <label for="image">image</label><input type="image" name="" id="image" src="../../雷电将军.png">
+  <strong>strong标签</strong>
+  <em>em标签</em>
+
+
+  <div class="wrap">
+    <div class="inner"></div>
+  </div>
+  <div class="demo"></div>
+</body>
+</html>

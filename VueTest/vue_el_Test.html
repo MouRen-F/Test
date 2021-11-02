@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app"></div>
+</body>
+<script src="../../vue.js"></script>
+<script>
+  new Vue({
+    // el: ".app",
+    template: `
+      <div class="add">
+        <p>我是大帅逼！！！</p>
+      </div>
+    `,
+    render: h => h(App),
+  }).$mount(".app");
+</script>
+
+</html>

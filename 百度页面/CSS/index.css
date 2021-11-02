@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.cantier {
+  width: 100%;
+  height: 100%;
+}
+.div-img {
+  margin: auto;
+  width: 654px;
+  text-align: center;
+  margin-top: 200px;
+}
+.div-img img {
+  width: 270px;
+}
+.div-search {
+  width: 654px;
+  text-align: center;
+  margin: auto;
+  font-size: 0px;
+}
+#ser-text {
+  /* width: 512px; */
+  padding: 12px 48px 12px 16px;
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 2px solid #4e6ef2;
+  height: 16px;
+}
+.input-su {
+  width: 108px;
+  height: 44px;
+  background-color: #4e6ef2;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}

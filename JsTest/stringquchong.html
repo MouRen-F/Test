@@ -1,0 +1,64 @@
+<script>
+    /*
+    *字符串数组去重
+    */
+    //方法一不修改原素组，返回一个新的数组
+    function strArr(target) {
+        var len = target.length;
+        var arr = [];
+        var i = 0;
+        var obj = {
+        }
+        for (i; i < len; i++) {
+            if (!obj[target[i]]) {
+                obj[target[i]] = "a";
+                arr.push(target[i]);
+            }
+        }
+        return arr;
+    }
+    //方法二 会修改元素组，并返回元素组
+    function strArrUpate(target) {
+        var len = target.length;
+        var arr = [];
+        var i = 0;
+        var obj = {
+        }
+        for (i; i < len; i++) {
+            if (!obj[target[i]]) {
+                obj[target[i]] = "a";
+            } else {
+                target.splice(i, 1);
+                i--;
+                len--;
+            }
+        }
+        return target;
+    }
+    var strarr = ["a", "c", "a", "b", "s", "c", "a"]
+
+    /**
+     * 字符串去重
+     * */
+    function str(target) {
+        var st = target.split("");
+        var stt = strArr(st);
+        target = "";
+        for (var i = 0; i < stt.length; i++) {
+            target += stt[i];
+        }
+        // var obj = {
+
+        // }
+        // var str1 = "";
+        // for (var i = 0; i < target.length; i++) {
+        //     if (!obj[target.charCodeAt(i)]) {
+        //         objp[target.charCodeAt(i)] = "A";
+
+        //     }
+        //     var st = "asdfas";
+        //     st.charCodeAt
+        // }
+        return target;
+    }
+</script>

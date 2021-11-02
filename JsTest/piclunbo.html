@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            line-height: 0;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+
+        ul {
+            width: 99999px;
+            position: absolute;
+            left: -2000px;
+        }
+
+        div.dic_pic {
+            overflow: hidden;
+            height: 500px;
+            width: 500px;
+            position: relative;
+        }
+
+        div.circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid;
+            float: left;
+            margin-left: 10px;
+            opacity: 0.5;
+        }
+
+        div.div_cirlce {
+            position: absolute;
+            width: 138px;
+            top: 450px;
+            left: 181px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dic_pic">
+        <ul>
+            <li><img src="../anime.jpg" alt=""></li>
+            <li><img src="../anime.jpg" alt=""></li>
+            <li><img src="../anime.jpg" alt=""></li>
+            <li><img src="../anime.jpg" alt=""></li>
+            <li><img src="../anime.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="div_cirlce">
+        <div class="circle" style="background-color: blue;"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <script src="../../Tools.js"></script>
+    <script>
+        function changeBgcolor(ele, ele2, ele3, ele4) {
+            ele.style.backgroundColor = "blue";
+            ele2.style.backgroundColor = "";
+            ele3.style.backgroundColor = "";
+            ele4.style.backgroundColor = "";
+        }
+        var c = document.getElementsByClassName("circle")[0];
+        var c2 = document.getElementsByClassName("circle")[1];
+        var c3 = document.getElementsByClassName("circle")[2];
+        var c4 = document.getElementsByClassName("circle")[3];
+        var ul = document.getElementsByTagName("ul")[0];
+        var leftPx = parseInt(getStyle(ul, "left"));
+        setInterval(function () {
+            var timer = setInterval(function () {
+                leftPx = leftPx + 5;
+                ul.style.left = leftPx + "px";
+                if (leftPx == 0) {
+                    leftPx = -2000
+                }
+                switch (leftPx) {
+                    case -2000:
+                        changeBgcolor(c, c2, c3, c4);
+                        break;
+                    case -1500:
+                        changeBgcolor(c2, c, c3, c4);
+                        break;
+                    case -1000:
+                        changeBgcolor(c3, c, c2, c4);
+                        break;
+                    case -500:
+                        changeBgcolor(c4, c, c3, c2);
+                        break;
+                    default:
+                        break;
+                }
+                if (leftPx % 500 == 0) {
+                    clearInterval(timer);
+                }
+            }, 10)
+        }, 2000)
+    </script>
+</body>
+
+</html>

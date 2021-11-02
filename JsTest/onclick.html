@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+    </ul>
+    <script>
+
+        document.onclick = function (e) {
+            // e.stopPropagation();
+            // console.log('document');
+            console.log(e);
+            var event = e;
+            console.log(event.target);
+        }
+
+        // var li = document.getElementsByTagName("li");
+        // for (var i = 0; i < li.length; i++) {
+        //     (function (j) {
+        //         li[j].addEventListener("click", function () {
+        //             console.log(j);
+        //         }, false);
+        //     })(i)
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="radio" name="sex" id="" v-model='sex' value='男'>男
+    <input type="radio" name="sex" id="" v-model='sex' value='女'>女
+  </div>
+  <script src="../../vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        sex: '男',//此值为单选按钮默认选择的值，随着点击的不同单选按钮，此值也会随之改变
+      }
+    });
+  </script>
+</body>
+
+</html>

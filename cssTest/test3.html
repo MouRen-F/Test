@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 320px;
+            font-size: 12px;
+        }
+        .wrapper:hover{
+            width: 400px;
+        }
+       .wrapper .img{
+        width: 100px;
+        height: 100px;
+        float: left;
+    } 
+    span{
+        vertical-align: top;
+    }
+    .content1{
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 8px;
+        line-height: 20px;
+        display: block;
+        height: 40px;
+        overflow: hidden;
+    }
+    .content2{
+        font-size: 12px;
+        line-height: 1.2em;
+        color: #666;
+        /*不建议在inline元素设置line-height，因为inline元素的行高还受父元素的行高影响*/
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <img src="./anime.jpg" alt="" class="img">
+        <span class="content1">{最多两行20px#333，顶部对齐图片，底部间距8px}</span>
+        <span class="content2">{12px#666行高1.2}使用语义化的html标签完成以下布局，考虑模块化和扩展性。容器默认宽度320px，右侧。</span>
+    </div>
+</body>
+</html>

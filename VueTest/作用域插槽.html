@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn>
+      <template v-slot:default>
+        <span>slot1</span>
+      </template>
+      <template v-slot:slot1="slot">
+        <span>{{slot.data.join("*")}}</span>
+      </template>
+    </cpn>
+  </div>
+  <template id="cpn">
+    <div>
+      <slot>
+        <ul>
+          <li v-for='item in arr'>{{item}}</li>
+        </ul>
+      </slot>
+      <br>
+      <slot name='slot1' :data='arr'>
+        <ul>
+          <li v-for='item in arr'>slot2--{{item}}</li>
+        </ul>
+      </slot>
+    </div>
+  </template>
+  <script src="../../vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+
+      },
+      components: {
+        cpn: {
+          template: '#cpn',
+          data() {
+            return {
+              arr: ['java', 'javascript', 'php', 'python'],
+            }
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

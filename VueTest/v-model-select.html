@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <select name="" v-model='fruit'>
+      <option value="香蕉">香蕉</option>
+      <option value="桃子">桃子</option>
+      <option value="西瓜">西瓜</option>
+      <option value="荔枝">荔枝</option>
+      <option value="芒果">芒果</option>
+    </select>
+    单选下拉框：{{fruit}}
+    <br><br>
+    <select name="" v-model='fruits' multiple>
+      <!--multiple为此下拉框为多选  -->
+      <option value="香蕉">香蕉</option>
+      <option value="桃子">桃子</option>
+      <option value="西瓜">西瓜</option>
+      <option value="荔枝">荔枝</option>
+      <option value="芒果">芒果</option>
+    </select>
+    多选下拉框:{{fruits}}
+  </div>
+  <script src="../../vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        fruit: '西瓜',//select为单选的时候，值跟value相同的被选中，选中莫一项，则值改变为被选中项的vlaue
+        fruits: [],//多选下拉框，值为数组，默认有值的时候则，值相同的被选中，或则被选中的添加到数组
+      }
+    });
+  </script>
+</body>
+
+</html>

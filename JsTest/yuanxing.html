@@ -1,0 +1,76 @@
+<script>
+  // function Car() {
+  //     this.name = "bwm";
+  //     this.color = "blue";
+  // }
+  // function Person() {
+
+  // }
+  // Car.prototype.constructor = Person;//改变car的构造方法，但是实际的还是Car，只是控制台car.constructor显示的是Person｛｝
+  // var car = new Car();
+  function Grand() {
+    this.name = "feng";
+    // aa = 12;错误，       new出来的grand对象无此属性
+    // Grand.cc = 11;错误   new出来的grand对象无此属性
+    this.bb = 123;
+  }
+  // Grand.prototype.age = 12;
+  var grand = new Grand();
+  function Father() { }
+  // Father.prototype = Grand;    //错误写法，设置
+  // Father.prototype = grand;
+  // Father.prototype.sex = "男";
+
+  // Father.prototype = grand;//指定的grand原型为所有new出来的实例拥有，拥有的为同一个grand对象实例
+
+  var father = new Father();
+  father.__proto__ = grand;//指定的这个grand原型只有这个father才有，新new出来的对象的原型不会是grand，而是默认的同一个object对象
+  father.__proto__.type = "ren";
+  var f1 = new Father();
+  var obj = {
+    name: "feng",
+  };
+
+  // var num = 123;
+  // function test() {
+  //     // console.log(arguments.callee);
+  //     var num = 111;
+  //     this.num = 222;
+  //     console.log(num);
+  // }
+  // test();
+
+  // var num = 1;
+
+  // function Test() {
+  //     this.num = 3;
+  //     console.log(this.num);
+  // }
+  // Test.prototype.num = 2;
+  // var t = new Test();
+
+  // var t2 = new Test();
+  // var a = 6;
+  // function t1() {
+  //     a = 1;
+  //     var a;
+  // }
+  // function t2() {
+  //     a = 3;
+  // }
+  // function t3() {
+  //     console.log(a);
+  // }
+  // var arr = [];
+
+  var arr = [1, 2, 4, 1, 2, 9, 52, 45];
+  //需要在此方法里面加两个形参
+  //如果返回值为整数，则后面的数在前面
+  //如果返回值为负数，则前面的数在前面
+  //如果返回值为0，则不变
+  //前面的形数是下面的形参a，后面的数则是形参b（每次都会按顺序把数组的前两位赋值给形参，跟冒泡排序差不多）
+  arr.sort(function (a, b) {
+    //里面可以写条件，然后返回相应的值
+    return a - b;
+  });
+</script>

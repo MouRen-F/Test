@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app">
+    <a :href="url">baidu</a>
+    <p>{{text}}</p>
+    <ul>
+      <li v-for="fruit in arr">
+        <button @click="changeStock(fruit,fruit.stock -1)">-</button>
+        {{fruit.name}}库存：{{fruit.stock}}
+        <button @click="changeStock(fruit,fruit.stock +1)">+</button>
+        <button @click="removeLi(i)">X</button>
+      </li>
+    </ul>
+  </div>
+  <script src="../../vue.js"></script>
+  <script>
+    var vue = new Vue({
+      el: ".app",
+      data: {
+        url: 'https://www.baidu.com/',
+        text: "Vue初使用",
+        arr: [
+          { name: "榴莲", stock: 10 },
+          { name: "香蕉", stock: 2 },
+          { name: "葡萄", stock: 32 },
+          { name: "芒果", stock: 5 },
+        ],
+      },
+      methods: {
+        changeStock: function (fruit, i) {
+          if (i < 0) {
+            i = 0;
+          }
+          fruit.stock = i;
+        },
+        removeLi(i) {
+          this.arr.splice(i, 1);
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

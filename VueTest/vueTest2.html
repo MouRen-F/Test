@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="../../vue.js"></script>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in moves" v-on:click="onRed(index)" :class="{red:active==index}">{{item}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                moves: ['海王', '钢铁侠', '复仇者联盟'],
+                active: 0,
+            },
+            methods: {
+                onRed: function (index) {
+                    console.log(index);
+                    this.active = index;
+                },
+            }
+        });
+    </script>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</body>
+
+</html>
