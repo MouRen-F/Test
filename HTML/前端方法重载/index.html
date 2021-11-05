@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /**
+   * js不能通过写同样的方法名字，不同参来实现重载
+   * 可以通过arguments的长度来实现，判断长度，调用不同实现
+   * */
+  function fn(){
+    console.log('我是无参方法');
+  }
+  fn();
+  fn('222');
+  function fn(val,a,b,c){
+    console.log('我是有参方法','值是-->',val);
+    console.log('arguments',arguments.length);
+  }
+
+  fn();
+  fn('123');
+</script>
+</html>

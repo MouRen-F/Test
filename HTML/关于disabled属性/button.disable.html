@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>确定</button>
+  <button onclick="disable()">禁用</button>
+</body>
+<script>
+  // function handle(){
+  //   console.log('111');
+  // };
+
+  // 按钮有disabled属性不管值为什么都会禁用，除非移除disabled属性
+  document.getElementsByTagName("button")[0].onclick = function (){
+    console.log('222');
+  };
+  function disable(){
+    document.getElementsByTagName('button')[0].setAttribute('disabled', true);
+  }
+  // document.getElementsByTagName('button')[0].setAttribute('disabled',false);
+</script>
+</html>

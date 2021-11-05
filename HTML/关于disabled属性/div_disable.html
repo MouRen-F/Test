@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bt{
+      width: 100px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: #57abff;
+      text-align: center;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bt">按钮</div>
+</body>
+<script>
+  document.getElementsByClassName('bt')[0].addEventListener('click',function(){
+    console.log('触发按钮方法!');
+  })
+  document.getElementsByClassName('bt')[0].setAttribute("disabled",false);
+  console.log(document.getElementsByClassName('bt')[0].getAttribute('disabled'));
+</script>
+</html>

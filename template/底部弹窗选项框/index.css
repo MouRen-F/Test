@@ -1,0 +1,51 @@
+html{
+  font-size: 50px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 16px;
+  background: rgba(0,0,0,0.2);
+}
+.option_wrap{
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+.option_title_box{
+  height: 0.6rem;
+  display: flex;
+  padding: 0.2rem 0;
+  border-bottom: 0.02rem solid #f1f1f1;
+}
+.option_back{
+  width: 0.6rem;
+  text-align: center;
+  line-height: 0.6rem;
+}
+.option_title{
+  text-align: center;
+  flex: 1;
+  line-height: 0.6rem;
+}
+.option_content{
+  height: calc(6rem - 0.6rem - 0.4rem - 0.02rem);
+  overflow-y: scroll;
+}
+.option_item{
+  padding: 0.3rem;
+  font-size: 0.34rem;
+  display: flex;
+  border: 0.02rem solid #f1f1f1;
+}
+.option_item_icon{
+  width: 0.5rem;
+  height: 0.5rem;
+  background-image: url(./pay-gs.png);
+  background-size: 0.5rem;
+  margin-right: 0.2rem;
+}
