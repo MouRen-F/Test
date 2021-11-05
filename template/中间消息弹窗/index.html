@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .masking{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .msg_wrap{
+      position: absolute;
+      /* top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 500px;
+      min-width: 100px;
+      border-radius: 15px;
+      padding: 0 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    .msg_content{
+      display: inline-block;
+      text-align: left;
+    }   
+  </style>
+</head>
+
+<body>
+  <button onclick="showMsgPop('我是谁')">弹窗</button>
+  <script>
+    /**
+     * es6的模板语法不适合Java的ftl模板，因为${}再ftl模板里面代表后台传来的值
+     * */
+    function showMsgPop(msg) {
+      var template = `<div class="masking">
+                        <div class="msg_wrap">
+                          <p class="msg_content">${msg}</p>
+                        </div>
+                      </div>`;
+      var el = document.createElement('div');
+      el.className = 'wrap';
+      document.getElementsByTagName('body')[0].appendChild(el);//appendChild里面只能是node节点
+      document.getElementsByClassName('wrap')[0].innerHTML = template;//不直接写在body里面是因为innerHTML会覆盖body里面原有内容
+      setTimeout(() => {
+        closeMsgPop();
+      }, 2000);
+    }
+    function closeMsgPop(){
+      document.getElementsByClassName("masking")[0].style.display = 'none';
+      document.getElementsByClassName("msg_wrap")[0].style.display = 'none';y
+    }
+  </script>
+</body>
+
+</html>
